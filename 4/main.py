@@ -21,5 +21,8 @@ def run_parser(url: str, background_tasks: BackgroundTasks):
 @app.get("/data")
 def get_all_data():
     db = SessionLocal()
-    results = db.query(AnimeModel).all()
+    try:
+        results = db.query(AnimeModel).all()
+    finally:
+        db.close()
     return results

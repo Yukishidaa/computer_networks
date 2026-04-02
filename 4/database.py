@@ -2,13 +2,11 @@ import os
 
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-
 from sqlalchemy import create_engine, Column, Integer, String
 
 
 db_host = os.getenv("DB_HOST", "pg_shikimori") 
 DATABASE_URL = f"postgresql://postgres:1234@{db_host}:5432/postgres"
-
 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
