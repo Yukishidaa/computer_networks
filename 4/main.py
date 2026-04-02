@@ -1,4 +1,5 @@
 from fastapi import FastAPI, BackgroundTasks
+
 from database import SessionLocal, AnimeModel, init_db
 from DataHarvest import ShikimoriParser
 
