@@ -1,9 +1,10 @@
 import time
 import random
 
-from database import SessionLocal, AnimeModel, init_db
 import playwright_stealth as ps
 from playwright.sync_api import sync_playwright
+
+from database import SessionLocal, AnimeModel, init_db
 
 
 class ShikimoriParser:
